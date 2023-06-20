@@ -1,0 +1,23 @@
+def divide(dividend, divisor):
+        """
+        :type dividend: int
+        :type divisor: int
+        :rtype: int
+        """
+        currValue = 0
+        quotient = 0
+        if dividend >0:
+            isPos = True
+        elif dividend < 0:
+            isNeg = True
+        if isPos:    
+            while currValue >= 0:
+                currValue = dividend - divisor
+                quotient += 1
+        elif isNeg:
+            while currValue <= 0:
+                currValue = dividend + divisor
+                quotient += 1
+        return quotient
+
+print(divide(8, 2))
